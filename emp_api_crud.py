@@ -16,10 +16,11 @@ app.config['SECRET_KEY'] = 'mysecretkey'
 
 
 """ Setting up the path for database """
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
-    os.path.join(basedir, 'data.sqlite')
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+
+    
 """ Database configuration """
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
